@@ -1,0 +1,289 @@
+:root {
+  --bg-color: #060a0d;
+  --panel-bg: #0e275966;
+  --panel-border: #113a8c;
+  --primary-accent: #188fd9;
+  --secondary-accent: #70308c;
+  --primary-text: #e0e0e0;
+  --secondary-text: #a0a0a0;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Oxanium", sans-serif;
+  background-color: var(--bg-color);
+  color: var(--primary-text);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 40px 20px;
+  background-image: radial-gradient(
+      circle at top left,
+      #188fd91a,
+      transparent 35%
+    ),
+    radial-gradient(circle at bottom right, #70308c1a, transparent 35%);
+}
+
+/* === ESTRUTURA PRINCIPAL (CONTAINER) === */
+.container {
+  width: 100%;
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 25px;
+  z-index: 1;
+}
+
+/* === CABEÇALHO DO PERFIL === */
+.profile-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  text-align: center;
+}
+
+.profile-photo {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid var(--primary-accent);
+  box-shadow: 0 0 10px #188fd966, 0 0 10px var(--secondary-accent) inset;
+  animation: pulse 3.5s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 10px #70308c, 0 0 10px var(--secondary-accent) inset;
+  }
+  50% {
+    box-shadow: 0 0 20px #70308c, 0 0 18px var(--secondary-accent) inset;
+  }
+  100% {
+    box-shadow: 0 0 10px #70308c, 0 0 10px var(--secondary-accent) inset;
+  }
+}
+
+.profile-name {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+/* === LINKS SOCIAIS === */
+.social-links {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.social-links a {
+  color: var(--secondary-text);
+  font-size: 1.6em;
+  text-decoration: none;
+  transition: color 0.4s ease, transform 0.4s ease;
+}
+
+.social-links a:hover {
+  transform: translateY(-5px) scale(1.1);
+  color: var(--primary-accent);
+}
+
+.social-links a svg {
+  width: 1em;
+  height: 1em;
+}
+
+/* === NAVEGAÇÃO POR ABAS === */
+.tabs-nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  width: 100%;
+  margin-top: 10px;
+}
+
+.tab-link {
+  background: none;
+  border: none;
+  color: var(--secondary-text);
+  font-family: "Oxanium", sans-serif;
+  font-size: 1.1em;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 5px;
+  opacity: 0.7;
+  transition: color 0.3s ease, opacity 0.3s ease;
+}
+
+.tab-link:hover {
+  opacity: 1;
+}
+
+.tab-link.active {
+  color: var(--primary-text);
+  opacity: 1;
+}
+
+.tab-separator {
+  font-size: 1.2em;
+  color: var(--panel-border);
+  opacity: 0.5;
+}
+
+/* === CONTEÚDO DAS ABAS (SECTIONS) === */
+.content-container {
+  width: 100%;
+}
+
+.content-section {
+  display: none;
+  flex-direction: column;
+  gap: 15px;
+  width: 100%;
+}
+
+.content-section.active {
+  display: flex;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+/* Seção "Sobre" */
+#sobre {
+  background-color: var(--panel-bg);
+  backdrop-filter: blur(5px);
+  border: 1px solid var(--panel-border);
+  border-radius: 12px;
+  padding: 25px;
+  text-align: left;
+}
+
+#sobre h2 {
+  color: #ffffff;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+#sobre p {
+  line-height: 1.7;
+  font-size: 1em;
+  color: var(--primary-text);
+}
+
+.profile-bio {
+  font-size: 1.1em;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-align: center;
+}
+
+/* === BOTÕES DE LINK PADRÃO === */
+.link-button {
+  background-color: var(--panel-bg);
+  backdrop-filter: blur(5px);
+  color: var(--primary-text);
+  text-decoration: none;
+  font-size: 1.1em;
+  font-weight: 600;
+  width: 100%;
+  height: 60px;
+  border: 1px solid var(--panel-border);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding-left: 20px;
+  gap: 15px;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease,
+    background-color 0.3s ease;
+}
+
+.link-button:hover {
+  transform: translateY(-4px);
+  border-color: var(--primary-accent);
+  box-shadow: 0 0 15px #188fd94d;
+  background-color: #0e275999;
+}
+
+.link-button svg {
+  width: 24px;
+  height: 24px;
+  stroke-width: 2px;
+  color: var(--secondary-text);
+  transition: color 0.3s ease;
+}
+
+.link-button:hover svg {
+  color: var(--primary-accent);
+}
+
+/* === SEÇÃO DO PORTFÓLIO E DROPDOWN === */
+
+.link-button.portfolio-highlight {
+  justify-content: center;
+  padding-left: 0;
+  background-color: black;
+  border: 1.5px solid var(--primary-accent);
+  box-shadow: 0 0 10px #188fd980;
+  animation: portfolio-glow 4s infinite alternate;
+  border-radius: 10px;
+}
+
+.portfolio-highlight span {
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+
+/* === RESPONSIVIDADE PARA DISPOSITIVOS MÓVEIS === */
+@media (max-width: 768px) {
+  /* Ajustes gerais para o corpo e layout em telas pequenas */
+  body {
+    padding: 30px 15px;
+    align-items: flex-start;
+  }
+
+  /* Ajusta o tamanho da fonte do perfil */
+  .profile-name,
+  .profile-bio {
+    font-size: 1em;
+  }
+
+  /* Ajusta o tamanho dos botões de link padrão */
+  .link-button {
+    height: 55px;
+    font-size: 1em;
+    padding-left: 15px;
+  }
+
+  /* Ajusta o tamanho dos ícones dentro dos botões */
+  .link-button svg {
+    width: 22px;
+    height: 22px;
+  }
+  .portfolio-content {
+    flex-direction: column;
+  }
+
+  .portfolio-content .link-button {
+    flex: none;
+    width: 100%;
+  }
+}
