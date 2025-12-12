@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+    href="https://fonts.googleapis.com/css2?family=Oxanium:wght@400;600;700&display=swap"
+    rel="stylesheet"
+    />
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+    <link rel="stylesheet" href="styles/globalStyle.css" />
+    <title>Bio | José Lucas</title>
+  </head>
+  <body>
+    <main class="container">
+      <header class="profile-header">
+        <img
+          class="profile-photo"
+          src="./img/profile.png"
+          alt="Foto de perfil do José Lucas"
+        />
+        <h1 class="profile-name">@joselucas77</h1>
+
+        <div class="social-links">
+          <a href="https://www.instagram.com/jose_lucassc/" aria-label="Instagram" target="_blank"
+            ><i class="fab fa-instagram"></i
+          ></a>
+          <a href="https://www.linkedin.com/in/jose-lucas-dev/" aria-label="LinkedIn" target="_blank"
+            ><i class="fab fa-linkedin"></i
+          ></a>
+          <a href="https://github.com/joselucas77" aria-label="Github" target="_blank"
+            ><i class="fab fa-github"></i
+          ></a>
+          <a href="#" aria-label="Youtube" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+        </div>
+      </header>
+
+      <nav class="tabs-nav">
+        <button class="tab-link active" data-tab="links">Links</button>
+        <span class="tab-separator">|</span>
+        <button class="tab-link" data-tab="sobre">Sobre</button>
+      </nav>
+
+      <div class="content-container">
+        <section id="links" class="content-section active">
+          <a href="https://joselucas77.github.io/Portifolio/" class="link-button portfolio-highlight" target="_blank"
+            ><span>Portfólio</span></a>
+          <a href="#" class="link-button" target="_blank"
+            ><i data-lucide="notebook-pen"></i><span>DevBook - Documentação Pessoal de Tecnologias</span></a
+          >
+        </section>
+
+        <section id="sobre" class="content-section">
+          <h2>Sobre Mim</h2>
+          <p id="bio" class="profile-bio" style="color: #188fd9"></p>
+          <p>
+            Olá! Sou José Lucas, tenho 23 anos e sou apaixonado por tecnologia e pela criação de soluções que geram impacto real. Atualmente curso Análise e Desenvolvimento de Sistemas e faço parte do Programa Jovem Tech, onde desenvolvo sistemas para empresas privadas e órgãos públicos em Aracaju.
+          </p>
+          <p>No momento, estou focado no desenvolvimento de uma plataforma de gestão de solicitações cidadãos, utilizando Next.js, Supabase e Amazon S3 como principais tecnologias. Meu objetivo é evoluir como profissional, empreender na área de tecnologia e, no futuro, lançar minha própria startup — uma jornada que já venho construindo por meio de projetos e experiência prática.</p>
+        </section>
+      </div>
+
+      <footer>
+        <p class="copyright">&copy; 2025 José Lucas</p>
+      </footer>
+    </main>
+
+    <script src="js/TextScramble.js"></script>
+    <script src="js/aba.js"></script>
+    <script src="js/dropdown.js"></script>
+
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+      // Inicializa os ícones do Lucide após o carregamento da página
+      lucide.createIcons();
+    </script>
+  </body>
+</html>
