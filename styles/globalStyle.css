@@ -32,7 +32,6 @@ body {
     radial-gradient(circle at bottom right, #70308c1a, transparent 35%);
 }
 
-/* === ESTRUTURA PRINCIPAL (CONTAINER) === */
 .container {
   width: 100%;
   max-width: 600px;
@@ -43,28 +42,6 @@ body {
   z-index: 1;
 }
 
-/* .theme-toggle {
-  position: absolute;
-  top: 20px;
-  right: 200px;
-} */
-
-.theme-toggle button {
-  background: none;
-  border: none;
-  color: var(--secondary-text);
-  font-size: 1.5em;
-  cursor: pointer;
-  transition: color 0.3s ease;
-  border-radius: 100%;
-}
-
-.theme-toggle button icon {
-  width: 1em;
-  height: 1em;
-}
-
-/* === CABEÇALHO DO PERFIL === */
 .profile-header {
   display: flex;
   flex-direction: column;
@@ -109,7 +86,6 @@ body {
   color: #ffffff;
 }
 
-/* === LINKS SOCIAIS === */
 .social-links {
   display: flex;
   gap: 15px;
@@ -137,7 +113,6 @@ body {
   height: 1em;
 }
 
-/* === NAVEGAÇÃO POR ABAS === */
 .tabs-nav {
   display: flex;
   justify-content: center;
@@ -177,7 +152,6 @@ body {
   opacity: 0.5;
 }
 
-/* === CONTEÚDO DAS ABAS (SECTIONS) === */
 .content-container {
   width: 100%;
 }
@@ -194,7 +168,6 @@ body {
   animation: fadeIn 0.5s ease-in-out;
 }
 
-/* Seção "Sobre" */
 #sobre {
   background-color: var(--panel-bg);
   backdrop-filter: blur(5px);
@@ -223,7 +196,6 @@ body {
   text-align: center;
 }
 
-/* === BOTÕES DE LINK PADRÃO === */
 .link-button {
   background-color: var(--panel-bg);
   backdrop-filter: blur(5px);
@@ -268,45 +240,32 @@ body {
   color: var(--primary-accent);
 }
 
-/* === SEÇÃO DO PORTFÓLIO E DROPDOWN === */
-
-.link-button.portfolio-highlight {
-  justify-content: center;
-  padding-left: 0;
-  background-color: black;
-  border: 1.5px solid var(--primary-accent);
-  box-shadow: 0 0 10px #188fd980;
-  animation: portfolio-glow 4s infinite alternate;
-  border-radius: 10px;
+.wave {
+  display: inline-block;
+  transition: transform 0.2s ease;
 }
 
-.portfolio-highlight span {
-  font-size: 1.1rem;
-  font-weight: 700;
+.wave.active {
+  transform: translateY(-10px);
 }
 
-/* === RESPONSIVIDADE PARA DISPOSITIVOS MÓVEIS === */
 @media (max-width: 768px) {
-  /* Ajustes gerais para o corpo e layout em telas pequenas */
   body {
     padding: 30px 15px;
     align-items: flex-start;
   }
 
-  /* Ajusta o tamanho da fonte do perfil */
   .profile-name,
   .profile-bio {
     font-size: 1em;
   }
 
-  /* Ajusta o tamanho dos botões de link padrão */
   .link-button {
     height: 55px;
     font-size: 1em;
     padding-left: 15px;
   }
 
-  /* Ajusta o tamanho dos ícones dentro dos botões */
   .link-button svg {
     width: 22px;
     height: 22px;
