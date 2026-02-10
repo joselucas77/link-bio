@@ -28,13 +28,13 @@
     </header>
 
     <nav class="tabs-nav">
-      <button class="tab-link active" data-tab="links">Projetos</button>
+      <button class="tab-link active" data-tab="projetos">Projetos</button>
       <span class="tab-separator">|</span>
       <button class="tab-link" data-tab="sobre">Sobre</button>
     </nav>
 
     <div class="content-container">
-      <section id="links" class="content-section active">
+      <section id="projetos" class="content-section active">
         <a href="https://devbook-eight.vercel.app/tecnologias" class="link-button" target="_blank"><i
             data-lucide="notebook-pen"></i><span>DevBook - Documentação Pessoal de Tecnologias</span></a>
         <a href="https://cajureserva.vercel.app/" class="link-button" target="_blank"><i data-lucide="building-2"></i>
@@ -63,10 +63,13 @@
     </div>
 
     <footer>
-      <p class="copyright">&copy; 2025 José Lucas</p>
+      <p class="copyright">&copy; <span id="year"></span> José Lucas</p>
     </footer>
   </main>
 
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
   <script src="js/wave.js"></script>
   <script src="js/aba.js"></script>
 
